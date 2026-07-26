@@ -9,6 +9,16 @@ interface HeroProps {
   setActiveTab: (tab: string) => void;
 }
 
+const getAssetPath = (path: string) => {
+  if (typeof window !== 'undefined') {
+    const pathName = window.location.pathname;
+    if (pathName.startsWith('/consultant')) {
+      return `/consultant${path}`;
+    }
+  }
+  return path;
+};
+
 export default function Hero({ setActiveTab }: HeroProps) {
   const designations = [
     'CTO, AI Research Centre',
@@ -30,7 +40,7 @@ export default function Hero({ setActiveTab }: HeroProps) {
       id="hero"
       className="w-full min-h-screen relative flex items-center overflow-hidden border-b border-white/5 bg-[#07080b] hero-home"
       style={{
-        backgroundImage: "url('/rajesh_full.png')",
+        backgroundImage: `url('${getAssetPath('/rajesh_full.png')}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center 100px',
         backgroundRepeat: 'no-repeat',
