@@ -37,14 +37,14 @@ export default function Hero({ setActiveTab }: HeroProps) {
     >
       {/* Zoomed and aligned background photo */}
       <div
-        className="absolute top-[76px] bottom-0 left-0 right-0 pointer-events-none z-0"
+        className="absolute inset-0 pointer-events-none z-0"
         style={{
           backgroundImage: `url('${getAssetPath('/rajesh_8k_uhd_full.png')}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'right top',
+          backgroundPosition: '88% 22%',
           backgroundRepeat: 'no-repeat',
-          transform: 'scale(1.15)',
-          transformOrigin: 'right top',
+          transform: 'scale(1.1)',
+          transformOrigin: '88% 22%',
         }}
       />
 
