@@ -49,11 +49,11 @@ export default function Hero({ setActiveTab }: HeroProps) {
       />
 
       {/* Light gradient overlay to ensure text contrast while maintaining background image details */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-transparent pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-gradient-to-l from-black/85 via-black/35 to-transparent pointer-events-none z-10" />
 
       {/* Main Content Area */}
-      <div className="max-w-6xl w-full mx-auto px-6 z-20 pt-20">
-        <div className="max-w-xl space-y-5 text-left">
+      <div className="max-w-6xl w-full mx-auto px-6 z-20 pt-20 flex justify-end">
+        <div className="max-w-xl space-y-5 text-right flex flex-col items-end">
           
           {/* Main Title Section */}
           <div className="space-y-3">
@@ -61,7 +61,7 @@ export default function Hero({ setActiveTab }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold tracking-wide leading-tight uppercase select-none text-white"
+              className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold tracking-wide leading-tight uppercase select-none text-white text-right"
               style={{
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9), 4px 4px 12px rgba(0, 0, 0, 0.7)'
               }}
@@ -78,7 +78,7 @@ export default function Hero({ setActiveTab }: HeroProps) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
-                  className="text-sm sm:text-base lg:text-lg font-sans font-semibold text-sky-400 tracking-wide select-none"
+                  className="text-sm sm:text-base lg:text-lg font-sans font-semibold text-sky-400 tracking-wide select-none text-right"
                   style={{
                     textShadow: '1px 1px 3px rgba(0, 0, 0, 0.9)'
                   }}
@@ -94,17 +94,17 @@ export default function Hero({ setActiveTab }: HeroProps) {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center space-x-4 pt-2"
+            className="flex items-center justify-end gap-4 pt-2"
           >
             <button
-              onClick={() => setActiveTab('about')}
-              className="px-5 py-2.5 bg-white hover:bg-white/95 text-black font-bold rounded-lg transition-all text-xs uppercase tracking-wider cursor-pointer shadow-md flex items-center space-x-1.5"
+               onClick={() => setActiveTab('about')}
+               className="px-5 py-2.5 bg-white hover:bg-white/95 text-black font-bold rounded-lg transition-all text-xs uppercase tracking-wider cursor-pointer shadow-md flex items-center space-x-1.5"
             >
               <span>Explore Profile</span>
               <ChevronRight size={14} />
             </button>
             
-            <div className="flex space-x-3 text-white/80">
+            <div className="flex items-center gap-3 text-white/80">
               <a
                 href={portfolioData.contact.linkedin}
                 target="_blank"

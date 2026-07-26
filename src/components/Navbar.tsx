@@ -54,7 +54,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
         {/* Left Side: Logo */}
         <button
           onClick={() => handleLinkClick('home')}
-          className="font-sans font-extrabold text-lg sm:text-xl text-white tracking-wide text-left cursor-pointer hover:opacity-90 transition-opacity"
+          className="font-serif font-extrabold text-lg sm:text-xl text-white tracking-wide text-left cursor-pointer hover:opacity-90 transition-opacity"
           style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.25)' }}
         >
           {portfolioData.name}
@@ -68,8 +68,8 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
               <button
                 key={item.id}
                 onClick={() => handleLinkClick(item.id)}
-                className={`text-[16px] font-medium transition-all duration-200 cursor-pointer hover:-translate-y-0.5 block ${
-                  isActive ? 'text-white font-bold' : 'text-text-secondary hover:text-white'
+                className={`text-[15px] font-serif font-semibold tracking-wide transition-all duration-200 cursor-pointer hover:-translate-y-0.5 block ${
+                  isActive ? 'text-white font-extrabold' : 'text-text-secondary hover:text-white'
                 }`}
                 style={{
                   textShadow: isActive
