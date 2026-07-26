@@ -41,12 +41,15 @@ export default function Hero({ setActiveTab }: HeroProps) {
         style={{
           backgroundImage: `url('${getAssetPath('/rajesh_8k_uhd_full.png')}')`,
           backgroundSize: 'cover',
-          backgroundPosition: '88% 22%',
+          backgroundPosition: '88% 100px',
           backgroundRepeat: 'no-repeat',
-          transform: 'scale(1.1)',
-          transformOrigin: '88% 22%',
+          transform: 'scale(1.12)',
+          transformOrigin: '88% 100px',
         }}
       />
+
+      {/* Vertical gradient to seamlessly blend the top of the photo under the navbar */}
+      <div className="absolute top-0 left-0 right-0 h-[220px] bg-gradient-to-b from-[#07080b] via-[#07080b]/90 to-transparent pointer-events-none z-10" />
 
       {/* Light gradient overlay to ensure text contrast while maintaining background image details */}
       <div className="absolute inset-0 bg-gradient-to-l from-black/85 via-black/35 to-transparent pointer-events-none z-10" />
