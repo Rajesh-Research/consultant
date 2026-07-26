@@ -92,19 +92,7 @@ export default function Home() {
 
       {/* Horizontal Academic Footer */}
       <footer className="w-full bg-[#0a0a0c] border-t border-white/5 pt-12 pb-10 select-none mt-auto">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          
-          {/* Institutional Info */}
-          <div className="space-y-3">
-            <h3 className="font-serif font-bold text-white text-base tracking-wide uppercase">Woxsen University</h3>
-            <p className="text-xs text-text-secondary/75 leading-relaxed not-italic">
-              Kamkole, Sadasivpet, Hyderabad<br />
-              Telangana 502345, India<br />
-              <a href="https://woxsen.edu.in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors underline decoration-white/20">
-                www.woxsen.edu.in
-              </a>
-            </p>
-          </div>
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
 
           {/* Contact Details */}
           <div className="space-y-3">
