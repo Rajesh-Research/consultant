@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #07080b;
+}
+
+body {
+  background:
+    radial-gradient(120% 120% at 20% 20%, rgba(255, 255, 255, 0.02), transparent 50%),
+    radial-gradient(120% 120% at 80% 10%, rgba(255, 255, 255, 0.015), transparent 45%),
+    linear-gradient(180deg, #07080b 0%, #0a0a0c 35%, #050507 100%);
+  background-attachment: fixed;
+  color: #ededed;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Gradient Text (Silver/White Metallic) */
+.gradient-text {
+  @apply bg-gradient-to-r from-white via-accent2 to-white bg-clip-text text-transparent;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-0.5;
+}
+
+/* Minimalist Dark Glassmorphism */
+.glass {
+  @apply backdrop-blur-lg bg-black/40 border border-white/5 rounded-xl transition-all duration-300;
+}
+
+/* Italicized Paragraphs (Academic Print Aesthetic) */
+p {
+  @apply font-sans italic;
+}
+
+/* Button Styles (Academic / Minimalist) */
+.btn-primary {
+  @apply px-6 py-3 bg-white text-[#07080b] font-bold rounded-lg hover:shadow-lg hover:shadow-white/10 transition-all duration-300 hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-[#0f1015] border border-white/10 text-white font-semibold rounded-lg hover:border-white/30 hover:shadow-lg hover:shadow-white/5 transition-all duration-300;
+}
+
+/* Selection */
+::selection {
+  @apply bg-white text-primary;
+}
+
+/* Scrollbar (Minimalist Dark) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07080b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #25262b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e3f46;
+}
+
+/* Link Hover Glow Effects (inspired by raulvrodriguez.in) */
+.nav-logo-glow {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.015em;
+}
+
+.link-glow:hover {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.link-glow-active {
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 18px rgba(255, 255, 255, 0.2);
+}
+
+/* Sticky Navbar Classes */
+.nav-container {
+  @apply sticky top-0 w-full z-50 transition-all duration-300;
+}
+
+.navbar {
+  @apply max-w-6xl mx-auto px-6 py-4 flex items-center justify-between transition-all duration-300;
+}
+
+/* Full-bleed Hero and Academic Hero Section Styles */
+.hero-home {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero-home {
+    background-position: 80% center !important;
+  }
+}
+
+.academic-hero {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 40px;
+  background-image: linear-gradient(135deg, rgba(15, 16, 21, 0.95), rgba(7, 8, 11, 0.8));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) inset;
+}
+
+/* Page Section Divider spacing */
+.section-divider {
+  @apply border-b border-white/5 py-20 md:py-24;
+}
