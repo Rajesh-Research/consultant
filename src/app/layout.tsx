@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dr-rajesh-kumar.vercel.app'),
@@ -36,11 +37,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className="bg-primary text-text font-sans">
+        <CustomCursor />
         <div className="fixed inset-0 -z-10 bg-gradient-to-br from-primary via-secondary to-primary" />
         <div className="fixed inset-0 -z-9 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,212,255,0.1),rgba(255,255,255,0))]" />
         {children}

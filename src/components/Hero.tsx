@@ -9,14 +9,9 @@ interface HeroProps {
   setActiveTab: (tab: string) => void;
 }
 
+const isProd = process.env.NODE_ENV === 'production';
 const getAssetPath = (path: string) => {
-  if (typeof window !== 'undefined') {
-    const pathName = window.location.pathname;
-    if (pathName.startsWith('/consultant')) {
-      return `/consultant${path}`;
-    }
-  }
-  return path;
+  return isProd ? `/consultant${path}` : path;
 };
 
 export default function Hero({ setActiveTab }: HeroProps) {

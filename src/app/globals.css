@@ -24,6 +24,13 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
+/* Hide native cursor on desktop to support custom interactive cursor */
+@media (pointer: fine) {
+  body, a, button, [role="button"], input, select, textarea, .cursor-pointer {
+    cursor: none !important;
+  }
+}
+
 /* Gradient Text (Silver/White Metallic) */
 .gradient-text {
   @apply bg-gradient-to-r from-white via-accent2 to-white bg-clip-text text-transparent;

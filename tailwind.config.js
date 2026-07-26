@@ -16,7 +16,7 @@ module.exports = {
         'text-secondary': '#9f9f9f',
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'serif'],
+        'serif': ['Space Grotesk', 'sans-serif'],
         'sans': ['Inter', 'sans-serif'],
       },
       backgroundImage: {
