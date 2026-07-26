@@ -41,10 +41,10 @@ export default function Hero({ setActiveTab }: HeroProps) {
         style={{
           backgroundImage: `url('${getAssetPath('/rajesh_full.png')}')`,
           backgroundSize: 'cover',
-          backgroundPosition: '35% 100px',
+          backgroundPosition: 'right 100px',
           backgroundRepeat: 'no-repeat',
-          transform: 'scale(1.1)',
-          transformOrigin: '35% center',
+          transform: 'scale(1.35)',
+          transformOrigin: 'right center',
         }}
       />
 
@@ -53,7 +53,7 @@ export default function Hero({ setActiveTab }: HeroProps) {
 
       {/* Main Content Area */}
       <div className="max-w-6xl w-full mx-auto px-6 z-20 pt-20">
-        <div className="max-w-2xl space-y-5 text-left">
+        <div className="max-w-xl space-y-5 text-left">
           
           {/* Main Title Section */}
           <div className="space-y-3">
@@ -61,7 +61,7 @@ export default function Hero({ setActiveTab }: HeroProps) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold tracking-wide leading-tight uppercase select-none text-white"
+              className="text-3xl sm:text-4xl lg:text-[40px] font-serif font-bold tracking-wide leading-tight uppercase select-none text-white"
               style={{
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9), 4px 4px 12px rgba(0, 0, 0, 0.7)'
               }}
