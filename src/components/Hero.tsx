@@ -34,18 +34,25 @@ export default function Hero({ setActiveTab }: HeroProps) {
     <section
       id="hero"
       className="w-full min-h-screen relative flex items-center overflow-hidden border-b border-white/5 bg-[#07080b] hero-home"
-      style={{
-        backgroundImage: `url('${getAssetPath('/rajesh_full.png')}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'right 100px',
-        backgroundRepeat: 'no-repeat',
-      }}
     >
+      {/* Zoomed and aligned background photo */}
+      <div
+        className="absolute inset-0 pointer-events-none z-0"
+        style={{
+          backgroundImage: `url('${getAssetPath('/rajesh_full.png')}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'right 100px',
+          backgroundRepeat: 'no-repeat',
+          transform: 'scale(1.15)',
+          transformOrigin: 'right center',
+        }}
+      />
+
       {/* Light gradient overlay to ensure text contrast while maintaining background image details */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-transparent pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-transparent pointer-events-none z-10" />
 
       {/* Main Content Area */}
-      <div className="max-w-6xl w-full mx-auto px-6 z-10 pt-20">
+      <div className="max-w-6xl w-full mx-auto px-6 z-20 pt-20">
         <div className="max-w-2xl space-y-5 text-left">
           
           {/* Main Title Section */}
