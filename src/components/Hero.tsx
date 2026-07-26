@@ -37,7 +37,7 @@ export default function Hero({ setActiveTab }: HeroProps) {
       style={{
         backgroundImage: `url('${getAssetPath('/rajesh_full.png')}')`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center 100px',
+        backgroundPosition: 'right 100px',
         backgroundRepeat: 'no-repeat',
       }}
     >
