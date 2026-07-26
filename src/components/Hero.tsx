@@ -39,11 +39,11 @@ export default function Hero({ setActiveTab }: HeroProps) {
       <div
         className="absolute inset-0 pointer-events-none z-0"
         style={{
-          backgroundImage: `url('${getAssetPath('/homepage1.png')}')`,
+          backgroundImage: `url('${getAssetPath('/rajesh_8k_uhd_full.png')}')`,
           backgroundSize: 'cover',
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',
-          transform: 'scale(1.1)',
+          transform: 'scale(1.3)',
           transformOrigin: 'right center',
         }}
       />
